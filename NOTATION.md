@@ -65,7 +65,7 @@ Notes are special events to represent
 
 Each element of `notes` list MUST be ordered by `tick`.<br>
 A Note event MUST have `tick` and `number`.<br>
-If duration or velocity is not provided, nodes can set default values.
+If duration or velocity is not provided, nodes CAN set default values.
 
 Note event CAN have additional information such as `channel` for MPE or per-note parameter.
 
@@ -118,7 +118,7 @@ A Point represents a single value point and the interpolation between points.
 |---|---|---|
 |tick|integer|the change or beginning of the transition in ticks|
 |value|integer or float||
-|curve|string|(optional) interpolation between the point and the previous one|
+|curve|string|(optional) interpolation curve between the point and the next one|
 
 Values MUST have `tick` and `value`.
 `tick` of each point MUST be identical and ordered within the list (ascending).<br>
@@ -137,8 +137,8 @@ Value CAN have supplemental attributes for `curve` like below.
         "path": "midi.pitchbend",
         "points": [
             { "tick": 0, "value": 0 },
-            { "tick": 240, "value": 8191 },
-            { "tick": 480, "value": 0, "curve": "curve", "exp": 0.5 },
+            { "tick": 240, "value": 8191, "curve": "exp-curve", "exp": 0.5 },
+            { "tick": 480, "value": 0 },
         ]
     }
 ]
