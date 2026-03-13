@@ -3,12 +3,12 @@
 This is a proposal for Musical Node Model.
 
 The content of this repository MAY change in the future.<br>
-If you have any suggestions or similar projects, please submit them to the [Issues](https://github.com/h1data/musical-node-model/issues) or [contact the author](https://h1data.github.io/contact/).
+If you have any suggestions or similar projects, please feel free to submit them to the [Issues](https://github.com/h1data/musical-node-model/issues) or [contact the author](https://h1data.github.io/contact/).
 
 This proposal has three main goals;
 1. To separate digital sound systems into layers; UI, event handling, and DSP
 
-2. To define musical notation and realtime event message semantics for communicating between musical nodes
+2. To define musical notation and realtime event message semantics for communications between musical nodes
 
 3. To establish node graph architecture that allows independent programs to be connected as musical nodes
 
