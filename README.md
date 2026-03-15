@@ -120,6 +120,9 @@ flowchart TB
   ext-in --> OS --> ext-out
 ```
 
+The Nodes in Event Control Layer and DSP Layer SHOULD be managed with directed acyclic graph (DAG) model.
+However, the internal structure of Notation Layer is NOT restricted to a specific graph model because it is not realtime.
+
 ## Roadmaps
 
 The following are what to define in the project:
@@ -144,4 +147,4 @@ This node bridges the Event Control Layer and the DSP Layer by converting musica
 
 - [ ] (optional) Audio Buffer Broker<br>
 The Audio Buffer Broker WILL manage the connection between nodes in DSP Layer by audio bus.<br>
-There are already Core Audio, ASIO, and JACK, those manage audio signals between different threads or programs.
+There are already Core Audio, ASIO, and JACK, which manage audio signals between different threads or programs. Also, WebAudio API and AudioWorklet represent audio graph node systems.
